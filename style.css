@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Permanent Marker', cursive; */
+    background: #F2F2F3;
+    position: relative;
+    /* overflow: hidden;  */
+}
+
+a {
+    color: #000;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header {
+    width: 100%;
+    height: 150px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.header h3 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    
+}
+
+.styled-text {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    color: #D43C3C;
+}
+
+.nav-wrapper {
+    display: flex;
+    
+}
+
+.nav-wrapper li {
+    width: 150px;
+    text-align: end;
+    color: #fff;
+    position: relative;
+}
+
+.nav-wrapper li button {
+    background: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.nav-wrapper li a {
+    transition: color 0.5s;
+    color: #fff;
+   
+}
+
+
+
+.nav-wrapper li button:hover,
+.nav-wrapper li a:hover {
+    color: #D43C3C;  
+}
+
+.cart-count {
+    padding: 2px 5px;
+    background: #D43C3C;
+    border-radius: 100%;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.cart-count.show {
+    opacity: 1;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-1 {
+    /* background: #ccc; */
+    
+}
+
+.section-1-img-wrapper {
+    position: relative;
+    height: 500px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.section-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:  bottom;
+    
+    border-radius: 10px;
+    position: relative
+}
+
+
+.section-1-title {
+    font-size: 2.5rem;
+}
+
+.section-1-details {
+    color: #ccc;
+}
+
+.section-2 {
+    min-height: 100vh;
+    
+}
+
+.category-wrapper {
+    display: flex;
+    margin: 10px 0px 40px 0px;
+    position: sticky;
+    top: 0;
+    background: rgba(242, 242, 243, 0.7);
+    z-index: 10;
+    margin: 0 -15px;
+}
+
+.category {
+    position: relative;
+    margin-right: 20px;
+    padding: 10px 0;
+    margin: 0 15px;
+}
+
+.category.active::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #D43C3C;
+    bottom: 0;
+    animation: categoryNavAnimation 0.5s forwards;
+}
+
+@keyframes categoryNavAnimation {
+    0% {
+        width: 0%
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+.section-2 h4 {
+    font-size: 1.8rem;
+}
+
+.category-items {
+    min-height: 50vh;
+    width: 100%;
+}
+
+.category-heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.menu-items-wrapper {
+    width: 100%;
+    margin: 10px -15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+.menu-item {
+    flex: 1 0 400px;
+    height: 200px;
+    margin: 15px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px #e0e0e0;
+    overflow: hidden;
+    display: flex;
+    transition: box-shadow 0.5s;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    box-shadow: 12px 12px 10px #e0e0e0;
+}
+
+.menu-item:hover .menu-item-img-wrapper img {
+    filter: none;
+}
+
+.menu-item-img-wrapper {
+    width: 35%;
+    height: 100%;
+}
+
+.menu-item-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(0.7);
+    transition: filter 1s;
+}
+
+.menu-item-txt-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 15px;
+}
+
+.menu-item-title {
+    font-size: 1.5rem;
+}
+
+.menu-item-cost {
+    font-size: 0.8rem;
+    color: #999;
+    font-weight: 200;
+}
+
+.menu-item-description {
+    color: #999;
+    font-weight: 200;
+}
+
+.item-modal {
+    position: fixed;
+    width: 600px;
+    height: 650px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    border-radius: 10px;
+    padding: 0 20px;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.item-modal-header {
+    display: flex;
+    height: 70px;
+}
+
+.item-modal-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* background: #eee; */
+    overflow-y: scroll;
+    
+}
+
+.item-modal-footer {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.item-modal-footer > * {
+    display: flex;
+    flex: 1;
+}
+
+.to-cart-btn {
+    width: 70%;
+    height: 40px;
+    background: #000;
+    margin: auto;
+    margin-right: 0;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.modal-sum {
+    font-size: 0.9rem;
+    font-weight: normal;
+    transform: translateY(2px);
+}
+
+.item-quant-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.item-quant-panel {
+    width: 80px;
+    height: 30px;
+    background: #eee;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.quant-btn {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.item-modal-img-wrapper {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.item-modal-img {
+    width: 100%;
+    height: 100%;
+}
+
+.item-modal-addon-wrapper {
+    padding: 20px 0;
+}
+
+.side-panel {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+    top: 0;
+    right: -100%;
+    z-index: 50;
+    box-shadow: -2px 0px 5px #999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s linear;
+     overflow-y: scroll;
+}
+
+
+.side-panel.active {
+    right: 0%;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s linear;
+
+}
+
+.side-panel-header {
+    height: 50px;
+}
+
+.side-panel-body {
+   
+}
+
+
+
+.side-panel-close {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.cart-count-parag {
+    margin: 20px 0;
+}
+
+.cart-item-count {
+    font-weight: bold;
+}
+
+.cart-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.cart-item-list {
+    margin: 20px 0;
+}
+
+.cart-item-list li {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item-txt-wrapper {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.cart-item-action-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cart-item-action-wrapper .item-quant-panel {
+    width: 40px;
+}
+
+.cart-action-row {
+    display: flex;
+    flex: 1;
+    
+}
+
+.side-panel .to-cart-btn {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} 
+
+.side-panel .to-cart-btn span {
+    margin: 0 5px;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}

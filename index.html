@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/e36fc8b9d2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="header">
+        <h3><span class="styled-text">Vlad's</span> <br />Cafe</h3>
+        <ul class="nav-wrapper">
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li>
+                <button id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                <span class="cart-count" id="cart-count"></span>
+            </li>
+            <li><button><i class="fa-solid fa-user-large"></i></button></li>
+        </ul>
+    </nav>
+
+    <section class="section-1">
+        <div class="section-1-img-wrapper">
+            <img src="./images/section_1_bg_bw.jpg" />
+        </div>
+        <h2 class="section-1-title">Vlad's Cafe</h2>
+        <p class="section-1-details">Vlad's Cafe, Haifa, Israel</p>
+        <p class="section-1-details">Open Hours: 08:00 - 19:00</p>
+    </section>
+    <section class="section-2">
+        <h4>Menu</h4>
+        <ul class="category-wrapper" id="category-wrapper">
+            <li class="category" id="popularNav"><a href="#popular">Popular Items</a></li>
+            <li class="category" id="breakfastNav"><a href="#breakfast">Breakfast</a></li>
+            <li class="category" id="launchNav"><a href="#launch">Launch</a></li>
+            <li class="category" id="pastriesNav"><a href="#pastries">Pastries</a></li>
+            <li class="category" id="drinksNav"><a href="#drinks">Drinks</a></li>
+        </ul>
+        <div class="menu-items-wrapper" id="menu-items-wrapper">
+        
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- <div class="item-modal" id="item-modal">
+        <div class="item-modal-header">
+            <button id="modal-close-btn" class="modal-close-btn">X</button>
+        </div>
+        <div class="item-modal-content">
+            <div class="item-modal-img-wrapper">
+                <img src="./images/section_2_item_4.jpg" class="item-modal-img" />
+            </div>
+            <div class="item-modal-addon-wrapper">
+                <h3 class="menu-item-title">Cappuccino</h3>
+                <span class="menu-item-cost">NIS 8.50</span>
+
+            </div>
+
+        </div>
+        <div class="item-modal-footer">
+            <div class="item-quant-wrapper">
+                <button class="quant-btn-minus quant-btn">-</button>
+                <span class="item-quant-panel">1</span>
+                <button class="quant-btn-plus quant-btn">+</button>
+            </div>
+            <button class="to-cart-btn" id="to-cart-btn">
+                <span class="modal-btn-text">Add to Cart</span>
+                <span class="modal-sum" id="modal-sum">NIS 8.50</span>
+            </button>
+        </div>
+    </div> -->
+
+
+    <div class="overlay" id="overlay"></div>
+    
+    <aside class="side-panel" id="side-panel">
+        <div class="side-panel-header">
+            <button class="side-panel-close" id="side-panel-close">X</button>
+        </div>
+        <div class="side-panel-body" id="side-panel-body">
+            <!-- <h2>Your Cart</h2>
+            <p class="cart-count-parag">
+                You have <span class="cart-item-count" id="cart-item-count">6</span> items
+            </p>
+            <button class="to-cart-btn" id="to-cart-btn">
+                <span class="modal-btn-text">Checkout</span>
+                <span class="modal-sum" id="modal-sum">NIS 85.50</span>
+            </button>
+            <ul class="cart-item-list">
+                <li>
+                    <img src="./images/section_2_item_4.jpg" class="cart-item-img" />
+                    <div class="cart-item-txt-wrapper">
+                        <p>Cappuccino</p>
+                        <span class="cart-item-total" id="cart-item-total">NIS 39.00</span>
+                    </div>
+                    <div class="cart-item-action-wrapper">
+                        <div class="cart-action-row">
+                            <button class="quant-btn-minus quant-btn">-</button>
+                            <span class="item-quant-panel">1</span>
+                            <button class="quant-btn-plus quant-btn">+</button>
+                        </div>
+                        <div class="cart-action-row">
+                            <button class="remove-item-btn" id="remove-item-btn"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </li>
+            </ul> -->
+        </div>
+    </aside>
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
